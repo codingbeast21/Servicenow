@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
+        <caller_access/>
+        <client_scripts_access>false</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
+        <delete_access>false</delete_access>
+        <is_extendable>true</is_extendable>
+        <label>Room</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>u_room</name>
+        <number_ref/>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class/>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 09:06:32</sys_created_on>
+        <sys_id>21b00bff8326221040a9c8efeeaad346</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Room</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_db_object_21b00bff8326221040a9c8efeeaad346</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 09:06:32</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="u_room_user" name="u_room_user">1fc0c7ff8326221040a9c8efeeaad398</user_role>
+        <ws_access>true</ws_access>
+    </sys_db_object>
+</record_update>

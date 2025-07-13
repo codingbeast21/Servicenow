@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Results" section_id="71cc09988332221040a9c8efeeaad38a" sys_domain="global" table="u_lab_test" version="3" view="Lab_Technician_View">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_results</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-13 13:56:35</sys_created_on>
+            <sys_id>f5cc09988332221040a9c8efeeaad3a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Results" display_value="Results" name="u_lab_test" sys_domain="global" view="69cc09988332221040a9c8efeeaad308">71cc09988332221040a9c8efeeaad38a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-13 13:56:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Results</caption>
+            <header>false</header>
+            <name>u_lab_test</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-13 13:56:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>71cc09988332221040a9c8efeeaad38a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_lab_test</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+            <sys_update_name>sys_ui_section_71cc09988332221040a9c8efeeaad38a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-13 13:56:35</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Lab Technician View" name="Lab_Technician_View">69cc09988332221040a9c8efeeaad308</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

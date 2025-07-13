@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-12 09:01:34</sys_created_on>
+        <sys_id>a2afb2bf8326221040a9c8efeeaad357</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_ward.u_ward_user</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_security_acl display_value="u_ward">56afb2bf8326221040a9c8efeeaad353</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a2afb2bf8326221040a9c8efeeaad357</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-12 09:01:34</sys_updated_on>
+        <sys_user_role display_value="u_ward_user" name="u_ward_user">86afbe7f8326221040a9c8efeeaad3c5</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

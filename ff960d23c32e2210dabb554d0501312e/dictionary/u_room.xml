@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="21b00bff8326221040a9c8efeeaad346" label="Room" max_length="40" name="u_room" type="collection">
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Room Number" mandatory="true" max_length="40" name="u_room_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Available" sequence="1" value="available"/>
+                <element inactive_on_update="false" label="Occupied" sequence="2" value="occupied"/>
+                <element inactive_on_update="false" label="Under Maintenance" sequence="3" value="under maintenance"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+            </choice>
+        </element>
+        <element label="Occupied Beds" mandatory="true" max_length="40" name="u_occupied_beds" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Room ID" max_length="40" name="u_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
+        <element attributes="encode_utf8=false" label="Ward ID" mandatory="true" max_length="32" name="u_ward_id" reference="u_ward" type="reference"/>
+        <element label="Bed Count" mandatory="true" max_length="40" name="u_bed_count" type="integer"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_ward_id"/>
+        </index>
+    </element>
+</database>

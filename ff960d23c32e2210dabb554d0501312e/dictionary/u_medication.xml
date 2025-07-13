@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="877226bb83a2221040a9c8efeeaad325" extends="task" label="Medication" max_length="40" name="u_medication" type="collection">
+        <element attributes="encode_utf8=false" label="Prescribing Doctor" mandatory="true" max_length="32" name="u_prescribing_doctor" reference="u_doctor" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="1" value="new"/>
+                <element inactive_on_update="false" label="In Progress" sequence="3" value="in progress"/>
+                <element inactive_on_update="false" label="Prescribed" sequence="2" value="prescribed"/>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="completed"/>
+                <element inactive_on_update="false" label="None" sequence="0" value="none"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Patient ID" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Frequency" mandatory="true" max_length="40" name="u_frequency" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Thrice Daily" sequence="3" value="thrice daily"/>
+                <element inactive_on_update="false" label="Etc" sequence="4" value="etc"/>
+                <element inactive_on_update="false" label="Twice Daily" sequence="2" value="twice daily"/>
+                <element inactive_on_update="false" label="Once Daily" sequence="1" value="once daily"/>
+                <element inactive_on_update="false" label="None" sequence="0" value="none"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="u_end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Dosage" mandatory="true" max_length="40" name="u_dosage" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Medication Name" mandatory="true" max_length="40" name="u_medication_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="u_start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
+    </element>
+</database>
