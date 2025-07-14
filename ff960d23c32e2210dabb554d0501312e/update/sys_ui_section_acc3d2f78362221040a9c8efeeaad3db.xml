@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-12 06:56:02</sys_created_on>
-            <sys_id>67e26ebb83a2221040a9c8efeeaad3b9</sys_id>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>4d8363d883fa221040a9c8efeeaad381</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-12 06:56:02</sys_updated_on>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,55 +18,69 @@
             <element>u_appointment_date</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-12 06:56:02</sys_created_on>
-            <sys_id>ebe26ebb83a2221040a9c8efeeaad3b9</sys_id>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>c18363d883fa221040a9c8efeeaad382</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-12 06:56:02</sys_updated_on>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>498363d883fa221040a9c8efeeaad382</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-12 06:56:02</sys_created_on>
-            <sys_id>63e26ebb83a2221040a9c8efeeaad3ba</sys_id>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>cd8363d883fa221040a9c8efeeaad382</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-12 06:56:02</sys_updated_on>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_patient_id</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-12 06:56:02</sys_created_on>
-            <sys_id>e7e26ebb83a2221040a9c8efeeaad3ba</sys_id>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>458363d883fa221040a9c8efeeaad383</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-12 06:56:02</sys_updated_on>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_department</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-12 06:56:02</sys_created_on>
-            <sys_id>6fe26ebb83a2221040a9c8efeeaad3ba</sys_id>
+            <sys_created_on>2025-07-14 00:55:10</sys_created_on>
+            <sys_id>c98363d883fa221040a9c8efeeaad383</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Appointment Details" display_value="Appointment Details" name="u_appointment" sys_domain="global" view="Default view">acc3d2f78362221040a9c8efeeaad3db</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-12 06:56:02</sys_updated_on>
+            <sys_updated_on>2025-07-14 00:55:10</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

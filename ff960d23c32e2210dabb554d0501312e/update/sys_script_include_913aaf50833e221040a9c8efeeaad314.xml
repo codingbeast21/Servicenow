@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.BillingUtils </api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>BillingUtils </name>
+        <script><![CDATA[var BillingUtils = Class.create();
+BillingUtils.prototype = {
+    initialize: function() {},
+
+    calculateTotalBilling: function(patientSysId) {
+        var total = 0;
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id', patientSysId);
+        gr.query();
+        while (gr.next()) {
+            var amount = parseFloat(gr.u_total_amount);
+            if (!isNaN(amount)) {
+                total += amount;
+            }
+        }
+        return total;
+    },
+
+    isOverdue: function(billingSysId) {
+        var gr = new GlideRecord('u_billing');
+        if (gr.get(billingSysId)) {
+            var dueDate = gr.u_due_date;
+            var paid = gr.u_status == 'Paid';
+            return dueDate && dueDate < new GlideDate() && !paid;
+        }
+        return false;
+    },
+
+    fetchById: function(billingSysId) {
+        var gr = new GlideRecord('u_billing');
+        if (gr.get(billingSysId)) {
+            return {
+                sys_id: gr.getUniqueValue(),
+                patient: gr.u_patient_id.getDisplayValue(),
+                amount: gr.u_total_amount + '',
+                status: gr.u_status + ''
+            };
+        }
+        return null;
+    },
+
+    fetchByPatient: function(patientSysId) {
+        var result = [];
+        var gr = new GlideRecord('u_billing');
+        gr.addQuery('u_patient_id', patientSysId);
+        gr.query();
+        while (gr.next()) {
+            result.push({
+                sys_id: gr.getUniqueValue(),
+                amount: gr.u_total_amount + '',
+                status: gr.u_payment_status + '',
+                billing_date: gr.u_billing_date ? gr.u_billing_date.getDisplayValue() : '',
+                due_date: gr.u_due_date ? gr.u_due_date.getDisplayValue() : ''
+            });
+        }
+        return result;
+    },
+
+    type: 'BillingUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-14 01:24:58</sys_created_on>
+        <sys_id>913aaf50833e221040a9c8efeeaad314</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BillingUtils </sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_913aaf50833e221040a9c8efeeaad314</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-14 01:24:58</sys_updated_on>
+    </sys_script_include>
+</record_update>

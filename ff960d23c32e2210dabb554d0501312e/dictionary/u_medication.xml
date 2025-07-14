@@ -10,6 +10,7 @@
                 <element inactive_on_update="false" label="None" sequence="0" value="none"/>
             </choice>
         </element>
+        <element label="Total Dosage" max_length="40" name="u_total_dosage" type="integer"/>
         <element attributes="encode_utf8=false" label="Patient ID" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Frequency" mandatory="true" max_length="40" name="u_frequency" type="string">
             <choice>

@@ -10,6 +10,7 @@
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
                 <element inactive_on_update="false" label="Overdue" sequence="3" value="overdue"/>
                 <element inactive="true" inactive_on_update="true" label="None" sequence="0" value="none"/>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="completed"/>
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>

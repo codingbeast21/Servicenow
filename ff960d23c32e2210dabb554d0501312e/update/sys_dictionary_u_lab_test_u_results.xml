@@ -2,10 +2,10 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="u_results" table="u_lab_test">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes>edge_encryption_enabled=true,no_attachment=true</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Results</column_label>
@@ -53,7 +53,7 @@
         <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
         <sys_update_name>sys_dictionary_u_lab_test_u_results</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-12 07:15:20</sys_updated_on>
+        <sys_updated_on>2025-07-13 15:31:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

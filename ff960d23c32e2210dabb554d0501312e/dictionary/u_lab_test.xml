@@ -12,7 +12,7 @@
                 <element inactive_on_update="false" label="None" sequence="0" value="none"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="scheduled" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="In Progress" sequence="4" value="in progress"/>
                 <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
@@ -22,6 +22,6 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
-        <element attributes="edge_encryption_enabled=true" label="Results" mandatory="true" max_length="1000" name="u_results" type="string"/>
+        <element attributes="edge_encryption_enabled=true,no_attachment=true" label="Results" mandatory="true" max_length="1000" name="u_results" type="string"/>
     </element>
 </database>
