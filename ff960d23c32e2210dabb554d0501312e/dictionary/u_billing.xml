@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="12c18f338366221040a9c8efeeaad311" extends="task" label="Billing" max_length="40" name="u_billing" type="collection">
         <element attributes="encode_utf8=false" label="Appointment ID" mandatory="true" max_length="32" name="u_appointment_id" reference="u_appointment" type="reference"/>
-        <element attributes="omit_sys_original=true" label="Total Amount" mandatory="true" max_length="20" name="u_total_amount" type="currency"/>
+        <element attributes="omit_sys_original=true" audit="true" label="Total Amount" mandatory="true" max_length="20" name="u_total_amount" type="currency"/>
         <element attributes="encode_utf8=false" label="Patient ID" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="3" default="new" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Paid" sequence="2" value="paid"/>
                 <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>u_appointment</collection>
+        <email_layout/>
+        <message/>
+        <message_html/>
+        <message_list/>
+        <message_text><![CDATA[Hi  ${u_patient_id.u_first_name}  ${u_patient_id.u_last_name},
+Your appointment is scheduled and your Appointment ID is  ${number}.
+Thank You!]]></message_text>
+        <name>Ques1</name>
+        <sms_alternate/>
+        <subject>Template for new appointment scheduling</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-14 10:56:26</sys_created_on>
+        <sys_id>075c2d688376621040a9c8efeeaad30c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Ques1</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sysevent_email_template_075c2d688376621040a9c8efeeaad30c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-14 10:56:26</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

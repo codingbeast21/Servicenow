@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.RoomUtilsClient</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>RoomUtilsClient</name>
+        <script><![CDATA[var RoomUtilsClient = Class.create();
+RoomUtilsClient.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getRoomDetails: function () {
+        var room = new GlideRecord('u_room');
+        if (room.get(this.getParameter('sysparm_room_id'))) {
+            return JSON.stringify({
+                room_number: room.getValue('u_room_number'),
+                type: room.getValue('u_type'),
+                capacity: room.getValue('u_capacity')
+            });
+        }
+        return JSON.stringify({error: "Room not found"});
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 18:18:08</sys_created_on>
+        <sys_id>23bb5cc183be221040a9c8efeeaad366</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>RoomUtilsClient</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_23bb5cc183be221040a9c8efeeaad366</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-16 04:50:44</sys_updated_on>
+    </sys_script_include>
+</record_update>

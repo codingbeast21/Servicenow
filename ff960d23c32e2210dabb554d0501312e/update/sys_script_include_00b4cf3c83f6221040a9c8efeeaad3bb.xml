@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.PatientUtilsClient</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>PatientUtilsClient</name>
+        <script><![CDATA[var PatientUtilsClient = Class.create();
+PatientUtilsClient.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getPatientDetails: function() {
+        var patientId = this.getParameter('sysparm_patient_id');
+
+        var gr = new GlideRecord('u_patient_record');
+        if (gr.get(patientId)) {
+            var data = {
+                first_name: gr.getValue('u_first_name'),
+                last_name: gr.getValue('u_last_name'),
+                gender: gr.getValue('u_gender'),
+            };
+            return JSON.stringify(data);
+        }
+
+        return '';
+    }
+
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 11:58:25</sys_created_on>
+        <sys_id>00b4cf3c83f6221040a9c8efeeaad3bb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>PatientUtilsClient</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_00b4cf3c83f6221040a9c8efeeaad3bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 12:43:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

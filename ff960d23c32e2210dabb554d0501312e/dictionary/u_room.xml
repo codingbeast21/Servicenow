@@ -10,7 +10,7 @@
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
-        <element label="Occupied Beds" mandatory="true" max_length="40" name="u_occupied_beds" type="integer"/>
+        <element audit="true" label="Occupied Beds" mandatory="true" max_length="40" name="u_occupied_beds" type="integer"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Room ID" max_length="40" name="u_number" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
         <element attributes="encode_utf8=false" label="Ward ID" mandatory="true" max_length="32" name="u_ward_id" reference="u_ward" type="reference"/>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.InsuranceUtilsClient</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>InsuranceUtilsClient</name>
+        <script><![CDATA[var InsuranceUtilsClient = Class.create();
+InsuranceUtilsClient.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'InsuranceUtilsClient'
+});var InsuranceUtilsClient = Class.create();
+InsuranceUtilsClient.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getInsuranceDetails: function () {
+        var insurance = new GlideRecord('u_insurance');
+        if (insurance.get(this.getParameter('sysparm_insurance_id'))) {
+            return JSON.stringify({
+                provider: insurance.getValue('u_provider'),
+                policy_number: insurance.getValue('u_policy_number')
+            });
+        }
+        return JSON.stringify({error: "Insurance not found"});
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 18:13:34</sys_created_on>
+        <sys_id>0b9a5c4183be221040a9c8efeeaad343</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>InsuranceUtilsClient</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_0b9a5c4183be221040a9c8efeeaad343</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-16 04:49:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

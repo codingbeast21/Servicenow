@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Ques8_a</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') return;
+
+    var ga = new GlideAjax('DoctorUtilsClient');
+    ga.addParam('sysparm_name', 'getDoctorDetails');
+    ga.addParam('sysparm_doctor_id', newValue);
+    ga.getXMLAnswer(function(response) {
+        var data = JSON.parse(response);
+        g_form.setValue('u_doctor_first_name', data.first_name);
+        g_form.setValue('u_specialization', data.specialization);
+    });
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 18:06:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9568d8cd837e221040a9c8efeeaad35b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Ques8_a</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_client_9568d8cd837e221040a9c8efeeaad35b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 18:06:19</sys_updated_on>
+        <table>u_appointment</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

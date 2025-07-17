@@ -11,8 +11,8 @@
                 <element inactive_on_update="false" label="None" sequence="0" value="none"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Appointment Date" mandatory="true" max_length="40" name="u_appointment_date" type="glide_date_time"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Status" max_length="40" name="u_status" type="string">
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Appointment Date" mandatory="true" max_length="40" name="u_appointment_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="3" default="none" label="Status" max_length="40" name="u_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Confirmed" sequence="2" value="confirmed"/>
                 <element inactive_on_update="false" label="Scheduled" sequence="1" value="scheduled"/>

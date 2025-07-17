@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="0b8f767f8326221040a9c8efeeaad3cf" label="Ward" max_length="40" name="u_ward" type="collection">
-        <element label="Occupancy" mandatory="true" max_length="40" name="u_occupancy" type="integer"/>
+        <element audit="true" label="Occupancy" mandatory="true" max_length="40" name="u_occupancy" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
         <element attributes="edge_encryption_enabled=true" label="Ward Name" mandatory="true" max_length="40" name="u_ward_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Location" mandatory="true" max_length="40" name="u_location" type="string"/>
