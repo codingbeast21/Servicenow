@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="b56693a783a2221040a9c8efeeaad377" label="Patient Record" max_length="40" name="u_patient_record" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="in progress" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Under Treatment" sequence="1" value="under treatment"/>
+                <element inactive_on_update="false" label="Discharged" sequence="2" value="discharged"/>
+                <element inactive_on_update="false" label="In Progress" sequence="0" value="in progress"/>
+            </choice>
+        </element>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="encode_utf8=false" label="Ward" max_length="32" name="u_ward" reference="u_ward" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="u_last_name" type="string"/>
         <element label="VIP" max_length="40" name="u_vip" type="boolean"/>
         <element label="Contact Number" max_length="40" name="u_contact_number" type="phone_number_e164"/>
         <element attributes="edge_encryption_enabled=true,email_client=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="u_first_name" type="string"/>
         <element label="Emergency Contact" max_length="40" name="u_emergency_contact" type="phone_number_e164"/>
+        <element attributes="encode_utf8=false" label="Room" max_length="32" name="u_room" reference="u_room" type="reference"/>
         <element label="Active" max_length="40" name="u_active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Address" mandatory="true" max_length="40" name="u_address" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Date Of Birth" mandatory="true" max_length="40" name="u_date_of_birth" type="glide_date"/>
@@ -25,6 +34,12 @@
         </element>
         <index name="index">
             <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_room"/>
+        </index>
+        <index name="index3">
+            <element name="u_ward"/>
         </index>
     </element>
 </database>

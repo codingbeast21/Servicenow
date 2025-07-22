@@ -4,15 +4,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-07-12 05:49:08</sys_created_on>
         <sys_id>33939e3b8362221040a9c8efeeaad3a4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>u_appointment.u_appointment_user</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_appointment.healthcare_staff</sys_name>
         <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
         <sys_security_acl display_value="u_appointment">7b939e3b8362221040a9c8efeeaad394</sys_security_acl>
         <sys_update_name>sys_security_acl_role_33939e3b8362221040a9c8efeeaad3a4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-12 05:49:08</sys_updated_on>
-        <sys_user_role display_value="u_appointment_user" name="u_appointment_user">eb935a3b8362221040a9c8efeeaad37e</sys_user_role>
+        <sys_updated_on>2025-07-19 12:31:18</sys_updated_on>
+        <sys_user_role display_value="healthcare_staff" name="healthcare_staff">7454db6f8322221040a9c8efeeaad3db</sys_user_role>
     </sys_security_acl_role>
 </record_update>

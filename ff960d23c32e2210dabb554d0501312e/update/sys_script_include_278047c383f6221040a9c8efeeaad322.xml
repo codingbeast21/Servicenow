@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.UpdateInsuranceRecord</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>UpdateInsuranceRecord</name>
+        <script><![CDATA[var UpdateInsuranceRecord = Class.create();
+UpdateInsuranceRecord.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+ 
+    updateKrdo:function()
+    {
+        var insuId = this.getParameter("sysparm_id");
+        var status = this.getParameter("sysparm_status");
+        var patient = this.getParameter("sysparm_patient");
+        gs.addInfoMessage("Reached here");
+        var gr = new GlideRecord("u_insurance");
+        gr.addQuery("sys_id", insuId);
+        gr.query();
+        if (gr.next()) {
+            if(gr.u_status != status){
+            gr.u_status = status;
+            }
+            
+            if(gr.u_patient_id != patient)
+            {
+                gr.u_patient_id = patient;
+            }
+            gr.update();
+            // gs.eventQueue("")
+            return true;
+        }
+        return false;
+    },
+ 
+    type: 'UpdateInsuranceRecord'
+});
+ ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 11:27:24</sys_created_on>
+        <sys_id>278047c383f6221040a9c8efeeaad322</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>UpdateInsuranceRecord</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_278047c383f6221040a9c8efeeaad322</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 11:52:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

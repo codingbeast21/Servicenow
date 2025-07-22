@@ -8,6 +8,7 @@
         <element label="Capacity" mandatory="true" max_length="40" name="u_capacity" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="Status" max_length="40" name="u_status" type="string">
             <choice>
+                <element inactive="true" inactive_on_update="true" label="Discharged" sequence="0" value="discharged"/>
                 <element inactive_on_update="false" label="Under Maintenance" sequence="2" value="under maintenance"/>
                 <element inactive_on_update="false" label="Closed" sequence="3" value="closed"/>
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
