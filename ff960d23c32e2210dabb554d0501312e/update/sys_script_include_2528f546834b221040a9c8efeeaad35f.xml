@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.MedicationAvailability</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>MedicationAvailability</name>
+        <script><![CDATA[var MedicationAvailability = Class.create();
+MedicationAvailability.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    
+   checkAvailability: function() {
+        var medName = this.getParameter('sysparm_medication_name');
+        var gr = new GlideRecord('u_medication');
+        gr.addQuery('u_medication_name', medName);
+        gr.query();
+        if (gr.next()) {
+            return 'Exists';   // Medication already present
+        }
+        return 'Not Exists';   // Medication not found
+    },
+
+    type: ' MedicationAvailability'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 13:58:59</sys_created_on>
+        <sys_id>2528f546834b221040a9c8efeeaad35f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MedicationAvailability</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_2528f546834b221040a9c8efeeaad35f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 15:57:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

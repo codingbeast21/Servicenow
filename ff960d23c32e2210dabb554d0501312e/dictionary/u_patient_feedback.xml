@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fa18c107830b221040a9c8efeeaad350" label="Patient Feedback" max_length="40" name="u_patient_feedback" type="collection">
+        <element attributes="encode_utf8=false" label="Appointment ID" max_length="32" name="u_appointment_id" reference="u_appointment" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Created On" max_length="40" name="u_created_on" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Feedback" max_length="40" name="u_feedback" type="string"/>
+        <element attributes="encode_utf8=false" label="Patient ID" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Feedback ID" max_length="40" name="u_number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Rating" max_length="40" name="u_rating" type="string">
+            <choice>
+                <element inactive_on_update="false" label="3 star" sequence="2" value="3 star"/>
+                <element inactive_on_update="false" label="1 star" sequence="0" value="1 star"/>
+                <element inactive_on_update="false" label="4 star" sequence="3" value="4 star"/>
+                <element inactive_on_update="false" label="5 star" sequence="4" value="5 star"/>
+                <element inactive_on_update="false" label="2 star" sequence="1" value="2 star"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_appointment_id"/>
+        </index>
+        <index name="index3">
+            <element name="u_patient_id"/>
+        </index>
+    </element>
+</database>

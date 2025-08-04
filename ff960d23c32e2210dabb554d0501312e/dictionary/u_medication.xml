@@ -3,6 +3,7 @@
         <element attributes="encode_utf8=false" label="Prescribing Doctor" mandatory="true" max_length="32" name="u_prescribing_doctor" reference="u_doctor" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Status" max_length="40" name="u_status" type="string">
             <choice>
+                <element inactive_on_update="false" label="Reminder Sent" sequence="5" value="reminder sent"/>
                 <element inactive_on_update="false" label="New" sequence="1" value="new"/>
                 <element inactive_on_update="false" label="In Progress" sequence="3" value="in progress"/>
                 <element inactive_on_update="false" label="Prescribed" sequence="2" value="prescribed"/>

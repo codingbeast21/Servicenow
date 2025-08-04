@@ -12,13 +12,16 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" audit="true" label="Appointment Date" mandatory="true" max_length="40" name="u_appointment_date" type="glide_date_time"/>
+        <element label="Check-In" max_length="40" name="u_check_in" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" audit="true" choice="3" default="none" label="Status" max_length="40" name="u_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Confirmed" sequence="2" value="confirmed"/>
                 <element inactive_on_update="false" label="Scheduled" sequence="1" value="scheduled"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
                 <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="5" value="in progress"/>
                 <element inactive_on_update="false" label="None" sequence="0" value="none"/>
+                <element inactive_on_update="false" label="No Show" sequence="6" value="no show"/>
             </choice>
         </element>
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>

@@ -72,5 +72,24 @@
             <sys_updated_on>2025-07-12 16:29:54</sys_updated_on>
             <value>expired</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Reminder Sent</label>
+            <language>en</language>
+            <name>u_insurance</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 11:45:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 11:45:16</sys_updated_on>
+            <value>reminder sent</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

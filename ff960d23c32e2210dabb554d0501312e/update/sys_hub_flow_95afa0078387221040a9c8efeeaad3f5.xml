@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1952000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to send billing reminders to patients for their pending bills.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>billing_reminder_notification</internal_name>
+        <label_cache>[{"name":"f1c569ca-2989-43d6-a80d-fe0505e67b19.Records","label":"1 - Look Up Records➛Billing Records","reference":"u_billing","reference_display":"Billing","type":"records","base_type":"records","usedInstances":{"b5a6490a-5061-418b-b55a-fc6275d106bf":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_email","label":"2 - For Each➛Billing Record➛Patient ID➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":["ah_to"]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.number","label":"2 - For Each➛Billing Record➛Billing ID","reference":"","reference_display":"Billing ID","type":"string","base_type":"string","parent_table_name":"u_billing","column_name":"number","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":["ah_subject"]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_first_name","label":"2 - For Each➛Billing Record➛Patient ID➛First Name","reference":"","reference_display":"First Name","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_first_name","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":[null]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_total_amount","label":"2 - For Each➛Billing Record➛Total Amount","reference":"","reference_display":"Total Amount","type":"currency","base_type":"currency","parent_table_name":"u_billing","column_name":"u_total_amount","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":[null]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item","label":"2 - For Each➛Billing Record","reference":"u_billing","reference_display":"Billing","type":"reference","base_type":"reference","usedInstances":{"73474009-71c5-46a6-809a-6b7a8ee25f27":["record"],"20ad71a6-7eb7-4aa7-8ad9-580272f38bd9":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master_snapshot>b917b08f8387221040a9c8efeeaad379</master_snapshot>
+        <name>Billing Reminder Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>b117b08f8387221040a9c8efeeaad3ae</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:08:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>95afa0078387221040a9c8efeeaad3f5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Billing Reminder Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_hub_flow_95afa0078387221040a9c8efeeaad3f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period/>
+        <run_start>2025-08-03 11:40:49</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b117b08f8387221040a9c8efeeaad3ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <time>1970-01-01 16:00:00</time>
+        <timer_type>11</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:b117b08f8387221040a9c8efeeaad3ae^sys_idNOT INf517b08f8387221040a9c8efeeaad3ae"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:b117b08f8387221040a9c8efeeaad3ae</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2025-08-03 11:40:49</run_start>
+        <run_time>1970-01-01 16:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('b117b08f8387221040a9c8efeeaad3ae');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f517b08f8387221040a9c8efeeaad3ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">b117b08f8387221040a9c8efeeaad3ae</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=95afa0078387221040a9c8efeeaad3f5^sys_idNOT IN22d5b40f8387221040a9c8efeeaad3d2"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:24</sys_created_on>
+        <sys_id>22d5b40f8387221040a9c8efeeaad3d2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=22d5b40f8387221040a9c8efeeaad3d2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>22d5b40f8387221040a9c8efeeaad3d2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:24</sys_created_on>
+        <sys_id>2ed5b40f8387221040a9c8efeeaad3d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:24</sys_updated_on>
+        <value>1970-01-01 08:00:00</value>
+        <variable display_value="Time">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_89142dc0c32222002841b63b12d3ae8a^id=22d5b40f8387221040a9c8efeeaad3d2"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=95afa0078387221040a9c8efeeaad3f5^sys_idNOT IN11afa0078387221040a9c8efeeaad3f6"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>95afa0078387221040a9c8efeeaad3f5</id>
+        <name>Billing Reminder Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:08:16</sys_created_on>
+        <sys_id>11afa0078387221040a9c8efeeaad3f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:08:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=11afa0078387221040a9c8efeeaad3f6"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=95afa0078387221040a9c8efeeaad3f5^sys_idNOT IN32d5b40f8387221040a9c8efeeaad3e8,bad5b40f8387221040a9c8efeeaad3da,c3f6fc4f8387221040a9c8efeeaad3f0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>32d5b40f8387221040a9c8efeeaad3e8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 15:00:02</sys_updated_on>
+        <ui_id>60b2f272-dd0f-4739-af58-426aa5ab7a14</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=32d5b40f8387221040a9c8efeeaad3e8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>32d5b40f8387221040a9c8efeeaad3e8</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>3ad5b40f8387221040a9c8efeeaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=32d5b40f8387221040a9c8efeeaad3e8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>32d5b40f8387221040a9c8efeeaad3e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>f2d5b40f8387221040a9c8efeeaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Dear &lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:34528256-7d8f-4bc1-90f3-902b52dc74af}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:34528256-7d8f-4bc1-90f3-902b52dc74af}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="2 - For Each &amp;gt; Billing Record &amp;gt; Patient ID &amp;gt; First Name"&gt;&lt;span class="pill-start"&gt;2 - For Each&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_34528256-7d8f-4bc1-90f3-902b52dc74af" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;This is a reminder that you have a pending bill of&amp;nbsp; &lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:3c22db9f-543f-4e2a-9d36-4cb544bdbaca}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="2 - For Each &amp;gt; Billing Record &amp;gt; Total Amount"&gt;&lt;span class="pill-start"&gt;2 - For Each&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Total Amount&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_3c22db9f-543f-4e2a-9d36-4cb544bdbaca" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;due.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Please make the payment at your earliest convenience.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Thank you,&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Hospital Billing Team&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>32d5b40f8387221040a9c8efeeaad3e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>b6d5b40f8387221040a9c8efeeaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>Billing Reminder for{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>32d5b40f8387221040a9c8efeeaad3e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>32d5b40f8387221040a9c8efeeaad3ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=32d5b40f8387221040a9c8efeeaad3e8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=32d5b40f8387221040a9c8efeeaad3e8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>bad5b40f8387221040a9c8efeeaad3da</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 15:00:02</sys_updated_on>
+        <ui_id>f1c569ca-2989-43d6-a80d-fe0505e67b19</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=bad5b40f8387221040a9c8efeeaad3da"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>bad5b40f8387221040a9c8efeeaad3da</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>b6d5b40f8387221040a9c8efeeaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <value>u_billing</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>bad5b40f8387221040a9c8efeeaad3da</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>f2d5b40f8387221040a9c8efeeaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <value>u_status=pending^ORu_status=overdue</value>
+        <variable display_value="Conditions">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=bad5b40f8387221040a9c8efeeaad3da"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bad5b40f8387221040a9c8efeeaad3da"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bad5b40f8387221040a9c8efeeaad3da"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>c3f6fc4f8387221040a9c8efeeaad3f0</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 15:00:02</sys_updated_on>
+        <ui_id>20ad71a6-7eb7-4aa7-8ad9-580272f38bd9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c3f6fc4f8387221040a9c8efeeaad3f0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c3f6fc4f8387221040a9c8efeeaad3f0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>0ff6fc4f8387221040a9c8efeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:21</sys_updated_on>
+        <value>u_status=reminder sent</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c3f6fc4f8387221040a9c8efeeaad3f0</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>cff6fc4f8387221040a9c8efeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:21</sys_updated_on>
+        <value>u_billing</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c3f6fc4f8387221040a9c8efeeaad3f0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>c3f6fc4f8387221040a9c8efeeaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>8bf6fc4f8387221040a9c8efeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>c3f6fc4f8387221040a9c8efeeaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>07f6fc4f8387221040a9c8efeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>c3f6fc4f8387221040a9c8efeeaad3f0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:21</sys_created_on>
+        <sys_id>c7f6fc4f8387221040a9c8efeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c3f6fc4f8387221040a9c8efeeaad3f0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c3f6fc4f8387221040a9c8efeeaad3f0"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=95afa0078387221040a9c8efeeaad3f5^sys_idNOT INf2d5b40f8387221040a9c8efeeaad3de"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3ed5b40f8387221040a9c8efeeaad3dd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>f2d5b40f8387221040a9c8efeeaad3de</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f2d5b40f8387221040a9c8efeeaad3de"/>
+    <sys_element_mapping action="delete_multiple" query="id=f2d5b40f8387221040a9c8efeeaad3de"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>f2d5b40f8387221040a9c8efeeaad3de</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>bad5b40f8387221040a9c8efeeaad3e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{f1c569ca-2989-43d6-a80d-fe0505e67b19.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f2d5b40f8387221040a9c8efeeaad3de"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f2d5b40f8387221040a9c8efeeaad3de"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=95afa0078387221040a9c8efeeaad3f5^sys_idNOT INb6d5b40f8387221040a9c8efeeaad3ec,fed5b40f8387221040a9c8efeeaad3eb"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>95afa0078387221040a9c8efeeaad3f5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_total_amount}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>b6d5b40f8387221040a9c8efeeaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>3c22db9f-543f-4e2a-9d36-4cb544bdbaca</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>95afa0078387221040a9c8efeeaad3f5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:35:25</sys_created_on>
+        <sys_id>fed5b40f8387221040a9c8efeeaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:35:25</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>34528256-7d8f-4bc1-90f3-902b52dc74af</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_95afa0078387221040a9c8efeeaad3f5"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow to send billing reminders to patients for their pending bills.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>billing_reminder_notification</internal_name>
+        <label_cache>[{"name":"f1c569ca-2989-43d6-a80d-fe0505e67b19.Records","label":"1 - Look Up Records➛Billing Records","reference":"u_billing","reference_display":"Billing","type":"records","base_type":"records","usedInstances":{"b5a6490a-5061-418b-b55a-fc6275d106bf":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_email","label":"2 - For Each➛Billing Record➛Patient ID➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":["ah_to"]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.number","label":"2 - For Each➛Billing Record➛Billing ID","reference":"","reference_display":"Billing ID","type":"string","base_type":"string","parent_table_name":"u_billing","column_name":"number","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":["ah_subject"]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_first_name","label":"2 - For Each➛Billing Record➛Patient ID➛First Name","reference":"","reference_display":"First Name","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_first_name","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":[null]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_total_amount","label":"2 - For Each➛Billing Record➛Total Amount","reference":"","reference_display":"Total Amount","type":"currency","base_type":"currency","parent_table_name":"u_billing","column_name":"u_total_amount","usedInstances":{"60b2f272-dd0f-4739-af58-426aa5ab7a14":[null]}},{"name":"b5a6490a-5061-418b-b55a-fc6275d106bf.item","label":"2 - For Each➛Billing Record","reference":"u_billing","reference_display":"Billing","type":"reference","base_type":"reference","usedInstances":{"73474009-71c5-46a6-809a-6b7a8ee25f27":["record"],"20ad71a6-7eb7-4aa7-8ad9-580272f38bd9":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}}]</label_cache>
+        <master>true</master>
+        <name>Billing Reminder Notification</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Billing Reminder Notification">95afa0078387221040a9c8efeeaad3f5</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b917b08f8387221040a9c8efeeaad379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=b917b08f8387221040a9c8efeeaad379^sys_idNOT INb917b08f8387221040a9c8efeeaad395"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">b917b08f8387221040a9c8efeeaad379</flow>
+        <name>Daily</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b917b08f8387221040a9c8efeeaad395</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <trigger_definition display_value="Daily">89142dc0c32222002841b63b12d3ae8a</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>daily</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b917b08f8387221040a9c8efeeaad395"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>b917b08f8387221040a9c8efeeaad395</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>3517b08f8387221040a9c8efeeaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value>1970-01-01 08:00:00</value>
+        <variable display_value="Time">3ad4edc0c32222002841b63b12d3aee5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_89142dc0c32222002841b63b12d3ae8a^id=b917b08f8387221040a9c8efeeaad395"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b917b08f8387221040a9c8efeeaad379^sys_idNOT INb117b08f8387221040a9c8efeeaad37a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b917b08f8387221040a9c8efeeaad379</id>
+        <name>Billing Reminder Notification</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b117b08f8387221040a9c8efeeaad37a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b117b08f8387221040a9c8efeeaad37a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=b917b08f8387221040a9c8efeeaad379^sys_idNOT IN3117b08f8387221040a9c8efeeaad38d,b517b08f8387221040a9c8efeeaad385,b917b08f8387221040a9c8efeeaad393"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">b917b08f8387221040a9c8efeeaad379</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>3117b08f8387221040a9c8efeeaad38d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <ui_id>60b2f272-dd0f-4739-af58-426aa5ab7a14</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3117b08f8387221040a9c8efeeaad38d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3117b08f8387221040a9c8efeeaad38d</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f117b08f8387221040a9c8efeeaad38f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3117b08f8387221040a9c8efeeaad38d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>3117b08f8387221040a9c8efeeaad38d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>bd17b08f8387221040a9c8efeeaad38e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Dear &lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:34528256-7d8f-4bc1-90f3-902b52dc74af}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:34528256-7d8f-4bc1-90f3-902b52dc74af}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="2 - For Each &amp;gt; Billing Record &amp;gt; Patient ID &amp;gt; First Name"&gt;&lt;span class="pill-start"&gt;2 - For Each&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First Name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_34528256-7d8f-4bc1-90f3-902b52dc74af" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;This is a reminder that you have a pending bill of&amp;nbsp; &lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:3c22db9f-543f-4e2a-9d36-4cb544bdbaca}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-tooltip-id="ah_tooltipTop" data-tooltip-content="2 - For Each &amp;gt; Billing Record &amp;gt; Total Amount"&gt;&lt;span class="pill-start"&gt;2 - For Each&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;Total Amount&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_3c22db9f-543f-4e2a-9d36-4cb544bdbaca" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;due.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Please make the payment at your earliest convenience.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Thank you,&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;Hospital Billing Team&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>3117b08f8387221040a9c8efeeaad38d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>7117b08f8387221040a9c8efeeaad38f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>Billing Reminder for{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>3117b08f8387221040a9c8efeeaad38d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f917b08f8387221040a9c8efeeaad38e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3117b08f8387221040a9c8efeeaad38d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3117b08f8387221040a9c8efeeaad38d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">b917b08f8387221040a9c8efeeaad379</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b517b08f8387221040a9c8efeeaad385</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <ui_id>f1c569ca-2989-43d6-a80d-fe0505e67b19</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b517b08f8387221040a9c8efeeaad385"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b517b08f8387221040a9c8efeeaad385</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>3117b08f8387221040a9c8efeeaad387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value>u_status=pending^ORu_status=overdue</value>
+        <variable display_value="Conditions">8f400a1587003300663ca1bb36cb0b50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b517b08f8387221040a9c8efeeaad385</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f117b08f8387221040a9c8efeeaad387</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value>u_billing</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=b517b08f8387221040a9c8efeeaad385"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b517b08f8387221040a9c8efeeaad385"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b517b08f8387221040a9c8efeeaad385"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Reminder Notification">b917b08f8387221040a9c8efeeaad379</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b917b08f8387221040a9c8efeeaad393</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <ui_id>20ad71a6-7eb7-4aa7-8ad9-580272f38bd9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b917b08f8387221040a9c8efeeaad393"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b917b08f8387221040a9c8efeeaad393</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b517b08f8387221040a9c8efeeaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value>u_billing</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b917b08f8387221040a9c8efeeaad393</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f117b08f8387221040a9c8efeeaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <value>u_status=reminder sent</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b917b08f8387221040a9c8efeeaad393"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>b917b08f8387221040a9c8efeeaad393</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>7117b08f8387221040a9c8efeeaad395</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>b917b08f8387221040a9c8efeeaad393</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f917b08f8387221040a9c8efeeaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>b917b08f8387221040a9c8efeeaad393</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>bd17b08f8387221040a9c8efeeaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b917b08f8387221040a9c8efeeaad393"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b917b08f8387221040a9c8efeeaad393"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=b917b08f8387221040a9c8efeeaad379^sys_idNOT INb517b08f8387221040a9c8efeeaad37d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">3ed5b40f8387221040a9c8efeeaad3dd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Billing Reminder Notification">b917b08f8387221040a9c8efeeaad379</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>b517b08f8387221040a9c8efeeaad37d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <ui_id>b5a6490a-5061-418b-b55a-fc6275d106bf</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=b517b08f8387221040a9c8efeeaad37d"/>
+    <sys_element_mapping action="delete_multiple" query="id=b517b08f8387221040a9c8efeeaad37d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>b517b08f8387221040a9c8efeeaad37d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>3d17b08f8387221040a9c8efeeaad37f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{f1c569ca-2989-43d6-a80d-fe0505e67b19.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=b517b08f8387221040a9c8efeeaad37d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b517b08f8387221040a9c8efeeaad37d"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b917b08f8387221040a9c8efeeaad379^sys_idNOT IN7917b08f8387221040a9c8efeeaad396,f517b08f8387221040a9c8efeeaad396"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b917b08f8387221040a9c8efeeaad379</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_total_amount}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>7917b08f8387221040a9c8efeeaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>3c22db9f-543f-4e2a-9d36-4cb544bdbaca</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>b917b08f8387221040a9c8efeeaad379</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b5a6490a-5061-418b-b55a-fc6275d106bf.item.u_patient_id.u_first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_id>f517b08f8387221040a9c8efeeaad396</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>34528256-7d8f-4bc1-90f3-902b52dc74af</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b917b08f8387221040a9c8efeeaad379"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b917b08f8387221040a9c8efeeaad379"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b917b08f8387221040a9c8efeeaad379"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b917b08f8387221040a9c8efeeaad379"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b917b08f8387221040a9c8efeeaad379"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>95afa0078387221040a9c8efeeaad3f5</sys_id>
+        <latest_snapshot>b917b08f8387221040a9c8efeeaad379</latest_snapshot>
+        <compiler_build>glide-washingtondc-12-20-2023__patch10-hotfix2b-04-16-2025_05-12-2025_1738.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=95afa0078387221040a9c8efeeaad3f5^sys_idNOT INf917b08f8387221040a9c8efeeaad3af"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f917b08f8387221040a9c8efeeaad3af","name":"plan","plan_signature":null}}</plan>
+        <plan_id>95afa0078387221040a9c8efeeaad3f5</plan_id>
+        <snapshot>44b4e10b838b221040a9c8efeeaad330</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 11:40:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f917b08f8387221040a9c8efeeaad3af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 11:40:49</sys_updated_on>
+        <trigger display_value="">b117b08f8387221040a9c8efeeaad3ae</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=95afa0078387221040a9c8efeeaad3f5"/>
+</record_update>

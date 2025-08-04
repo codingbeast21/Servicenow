@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.DoctorUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>DoctorUtils</name>
+        <script><![CDATA[var DoctorUtils = Class.create();
+DoctorUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getDoctorsByDepartmentName: function() {
+        var departmentName = this.getParameter('sysparm_department_name');
+        var result = [];
+
+        var gr = new GlideRecord('u_doctor');
+        gr.addQuery('u_department', departmentName);
+        gr.query();
+
+        while (gr.next()) {
+            result.push({
+                doctor_id: gr.getValue('u_number'),
+            });
+        }
+
+        return JSON.stringify(result);
+    }
+
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-29 16:22:10</sys_created_on>
+        <sys_id>2b224ce58387e21040a9c8efeeaad333</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>DoctorUtils</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_update_name>sys_script_include_2b224ce58387e21040a9c8efeeaad333</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 05:18:00</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</application>
+        <file_path/>
+        <instance_id>f5c419913bc74e1c16e44a8aa4e45ab4</instance_id>
+        <instance_name>dev278461</instance_name>
+        <name>sys_script_include_2b224ce58387e21040a9c8efeeaad333</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.DoctorUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;DoctorUtils&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var DoctorUtils = Class.create();
+DoctorUtils.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+    getDoctorsByDepartmentName: function() {
+        var departmentName = this.getParameter('sysparm_department_name');
+        var result = [];
+
+        var gr = new GlideRecord('u_doctor');
+        gr.addQuery('u_department', departmentName);
+        gr.query();
+
+        while (gr.next()) {
+            result.push({
+                doctor_id: gr.getValue('u_number'),
+            });
+        }
+
+        return JSON.stringify(result);
+    }
+
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-29 16:22:10&lt;/sys_created_on&gt;&lt;sys_id&gt;2b224ce58387e21040a9c8efeeaad333&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;DoctorUtils&lt;/sys_name&gt;&lt;sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e"&gt;ff960d23c32e2210dabb554d0501312e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Healthcare Management Application"&gt;ff960d23c32e2210dabb554d0501312e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_2b224ce58387e21040a9c8efeeaad333&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-31 05:18:00&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1652588213</payload_hash>
+        <record_name>DoctorUtils</record_name>
+        <reverted_from/>
+        <source>cc0c72a78322221040a9c8efeeaad3bc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 05:18:00</sys_created_on>
+        <sys_id>f4b208068303221040a9c8efeeaad367</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1985eea74b00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 05:18:00</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>7cb208062a03221055cb29e15222bd66</update_guid>
+        <update_guid_history>7cb208062a03221055cb29e15222bd66:-1652588213,45b144c2a30322105df40f47b01f38a5:1536588382,f9a1c48247032210e98a5cb81df8e17c:135378913,5a9f2df5174f2210163ece97581b0705:2112080146,a62de939454f22103d6cb87a9c70e5da:73727157,e723ed7db50f22107f4042119c16cb92:-787292535,4bdfd971910f22106a2efd473eec55a5:-1376332286,396915f1ed0f2210f624c8d7a6c4a8bd:-922264542,945b44ade787e21083fa921b595f3724:-826476059,61ca4c612ec7e21043a10ae446dab348:438457875,268788292487e210b0cc7c258d6ad798:-1200482898</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 05:53:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>12cdfe8c915546a4892031f148378210</sys_id>
+        <sys_metadata>2b224ce58387e21040a9c8efeeaad333</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DoctorUtils</sys_name>
+        <sys_package display_value="Healthcare Management Application" source="ff960d23c32e2210dabb554d0501312e">ff960d23c32e2210dabb554d0501312e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management Application">ff960d23c32e2210dabb554d0501312e</sys_scope>
+        <sys_scope_delete display_value="">48999da6658b4c70a0963917df26bc69</sys_scope_delete>
+        <sys_update_name>sys_script_include_2b224ce58387e21040a9c8efeeaad333</sys_update_name>
+        <sys_update_version display_value="sys_script_include_2b224ce58387e21040a9c8efeeaad333">f4b208068303221040a9c8efeeaad367</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 05:53:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

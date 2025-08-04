@@ -2,6 +2,7 @@
     <element audit="true" db_object_id="141526bf83a2221040a9c8efeeaad3c0" extends="task" label="Lab Test" max_length="40" name="u_lab_test" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Scheduled Date" mandatory="true" max_length="40" name="u_scheduled_date" type="glide_date_time"/>
         <element attributes="encode_utf8=false" label="Patient ID" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="encode_utf8=false" label="Doctor ID" mandatory="true" max_length="32" name="u_doctor_id" reference="u_doctor" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="none" label="Test Type" mandatory="true" max_length="40" name="u_test_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="Urine Test" sequence="2" value="urine test"/>

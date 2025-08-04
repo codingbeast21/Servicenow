@@ -14,6 +14,7 @@
         <element label="VIP" max_length="40" name="u_vip" type="boolean"/>
         <element label="Contact Number" max_length="40" name="u_contact_number" type="phone_number_e164"/>
         <element attributes="edge_encryption_enabled=true,email_client=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Visit Date" max_length="40" name="u_visit_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="u_first_name" type="string"/>
         <element label="Emergency Contact" max_length="40" name="u_emergency_contact" type="phone_number_e164"/>
         <element attributes="encode_utf8=false" label="Room" max_length="32" name="u_room" reference="u_room" type="reference"/>
